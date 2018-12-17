@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DoorDash</string>
+    <string name="action_restart_app">Delete DB/Restart App</string>
+    <string name="main_view_title">Discover</string>
+</resources>
