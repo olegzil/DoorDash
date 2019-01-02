@@ -4,19 +4,16 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import com.interviewtest.doordash.cachemanager.CacheManager
 import com.interviewtest.doordash.datamodel.FragmentCreationDescriptor
 import com.interviewtest.doordash.datamodel.MainActivityData
-import com.interviewtest.doordash.datamodelloader.MainAppStateLoader
 import com.interviewtest.doordash.fragments.RestaurantListFragment
-import com.interviewtest.doordash.interfaces.FragmentCreationInterface
 import com.interviewtest.doordash.utilities.printLog
 import io.reactivex.disposables.Disposables
 import io.reactivex.observers.DisposableObserver
 import io.reactivex.subjects.PublishSubject
 
-private var fragmentCallback = PublishSubject.create<FragmentCreationDescriptor>()
+var fragmentCallback = PublishSubject.create<FragmentCreationDescriptor>()
 
 enum class ViewIdentifier {
     RESTAURANT_LIST_FRAGMENT
@@ -68,6 +65,5 @@ class MainActivity : AppCompatActivity() {
     }
     companion object {
         const val MAIN_APP_ACTIVITY_KEY="'bf0fc40e-891d-431a-b59d-735f0b72420d"
-        fun getNotifier() = fragmentCallback
     }
 }

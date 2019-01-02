@@ -82,10 +82,6 @@ class PhotoFragment : Fragment() {
         }
     }
 
-    override fun onDetach() {
-        super.onDetach()
-    }
-
     companion object {
         val fragmentID = "c1b32631-4b46-4c7b-9e32-edcaf47b3e49"
 
